@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container_formulario {
+            background-color: #ffffff;
+            padding: 20px;
+            margin: 50px auto;
+            max-width: 400px;
+            box-shadow: 0 2px 3px #bebdbd;
+            border-radius: 8px;
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            resize: vertical;
+        }
+        input[type="text"], .botão {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+        .botão {
+            background-color: #50b153;
+            color: #ffffff;
+            cursor: pointer;
+            border: none;
+            margin-top: 20px;
+        }
+        .botão:hover {
+            background-color: #448d48;
+        }
+        th {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container_formulario">
+        <form action="/cadastro_assinatura" method="POST">
+            <table>
+                <tr>
+                    <th>ID Assinatura</th>
+                    <td><input type="text" name="id_assinatura" readonly placeholder="Automático"></td>
+                </tr>
+                <tr>
+                    <th>Nome</th>
+                    <td><input type="text" name="nome" maxlength="45" placeholder="Insira o nome da assinatura" required></td>
+                </tr>
+                <tr>
+                    <th colspan="2">
+                        <label for="descricao">Descrição do Produto:</label>
+                        <textarea id="descricao" name="descricao" rows="5" placeholder="Digite a descrição do produto"></textarea>
+                    </th>
+                </tr>
+            </table>
+            <input type="submit" class="botão" value="Salvar">
+        </form>
+    </div>
+</body>
+</html>
