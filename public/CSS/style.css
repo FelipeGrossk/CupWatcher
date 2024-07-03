@@ -10,7 +10,7 @@ body {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px #0000001a;
-    max-width: 600px;
+    max-width: 900px;
     margin: auto;
 }
 
@@ -45,13 +45,15 @@ th {
     background-color: #448d48;
 }
 
-.eye{
-    /* Eye */
-
-    position: absolute;
-    width: 342px;
-    height: 54px;
-    left: 103px;
-    top: 54px;
-
+.back-btn-as {
+    background-color: #50b153;
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 10%;
+    margin-top: 10px;
 }

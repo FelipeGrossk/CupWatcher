@@ -3,6 +3,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const mysql = require('mysql2/promise');
+const { Console } = require('console');
 
 // Importando arquivo .env
 require('dotenv').config();
@@ -59,7 +60,9 @@ app.post('/cadastro_usuario', (req, res) => {
 
   const userData = req.body
 
-  pool.execute('INSERT INTO usuario (nome, email, cpf) VALUES (?, ?, ?)', [userData.nome, userData.email, userData.cpf])
+  console.log(userData)
+
+  pool.execute('INSERT INTO usuario (nome, email, cpf, assinatura) VALUES (?, ?, ?, ?)', [userData.nome, userData.email, userData.cpf, userData.opcao])
 
   res.status(200).redirect('/')
 
@@ -72,6 +75,7 @@ app.get('/assinaturas', (req, res) => {
 
 })
 
+// Cadastro de assinaturas
 app.post('/cadastro_assinatura', (req, res) => {
 
   const keyData = req.body
@@ -79,6 +83,15 @@ app.post('/cadastro_assinatura', (req, res) => {
   pool.execute('INSERT INTO assinatura (descricao, nome) VALUES (?, ?)', [keyData.descricao, keyData.nome])
 
   res.status(200).redirect('/')
+
+})
+
+// Pegar opções de assinatura no banco
+app.get('/getOptions', async (req, res) =>{
+
+  const [rows, filds] = await pool.execute('SELECT * FROM assinatura;')
+
+  res.status(200).json(rows)
 
 })
 

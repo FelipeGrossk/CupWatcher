@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', async _ => {
             <td>${user.nome}</td>
             <td>${user.email}</td>
             <td>${user.cpf}</td>
+            <td>${user.assinatura}</td>
             </tr>`
 
             tableContainer.appendChild(tr)

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/StyleTelaCadastro.css">
+    <title>Cadastro Cliente</title>
+</head>
+<body>
+    <div class="container_formulario">
+        <form action="/cadastro_usuario" method="POST">
+            <table>
+                <tr id="id_usuario" >
+                    <th>ID Usuario</th>
+                    <td><input type="text" name="id_usuario" readonly placeholder="Automático" disabled ></td>
+                </tr>
+                <tr>
+                    <th><label for="nome">Nome</label></th>
+                    <td><input id="nome" type="text" name="nome" maxlength="45" placeholder="Insira o nome completo" required></td>
+                </tr>
+                <tr>
+                    <th><label for="email">Email</label></th>
+                    <td><input id="email" type="email" name="email" maxlength="45" placeholder="email@hotmail.com" required></td>
+                </tr>
+                <tr>
+                    <th><label for="cpf" >CPF</label></th>
+                    <td><input id="cpf" type="text" name="cpf" maxlength="11" placeholder="exemplo: xxx.xxx.xxx-xx" required></td>
+                </tr>
+            </table>
+            <input type="submit" class="botão" value="Salvar">
+        </form>
+    </div>
+    <script src="./Scripts/telaCadastro.js"></script>
+</body>
+</html>

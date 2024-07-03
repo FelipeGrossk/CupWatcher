@@ -1,54 +1,53 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 20px;
-}
-    
-.container_formulario{
-        background-color: #ffffff;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
         padding: 20px;
-        margin: 50px auto;
-        max-width: 400px;
-        box-shadow: 0 2px 3px #bebdbd;
-        border-radius: 8px;
-    
-}
-
-th, td {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-.botão{
-        background-color: #38aa38;
-        border-radius: 3px;
-        color: #ffffff;
-        border: 1px solid #c0b6b6;
-        padding: 10px;
-        margin-top: 8px;
-        cursor: pointer;
-}
-
-.botão:hover{
-        background-color: #2f942f;
-}
-
-input[type="text"]{
-        padding: 12px;
-        width: calc(100% - 20px);
-        margin: 4px 0;
-        border-radius: 6px;
-        border: 1px solid gray;
+    }
         
-}
-
-input[type="email"]{
-    padding: 12px;
-    width: calc(100% - 20px);
-    margin: 4px 0;
-    border-radius: 6px;
-    border: 1px solid gray;
+    .container_formulario{
+            background-color: #ffffff;
+            padding: 20px;
+            margin: 50px auto;
+            max-width: 400px;
+            box-shadow: 0 2px 3px #bebdbd;
+            border-radius: 8px;
+        
+    }
     
-}
+    th, td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    .botão{
+            background-color: #38aa38;
+            border-radius: 3px;
+            color: #ffffff;
+            border: 1px solid #c0b6b6;
+            padding: 10px;
+            margin-top: 8px;
+            cursor: pointer;
+    }
+    
+    .botão:hover{
+            background-color: #2f942f;
+    }
+    
+    input[type="text"]{
+            padding: 12px;
+            width: calc(100% - 20px);
+            margin: 4px 0;
+            border-radius: 6px;
+            border: 1px solid gray;
+            
+    }
+    
+    select {
+            padding: 12px;
+            width: calc(100% + 6px);
+            margin: 4px 0;
+            border-radius: 6px;
+            border: 1px solid gray;
+        }
